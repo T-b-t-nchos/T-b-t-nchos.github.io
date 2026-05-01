@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>T-b-t-nchos/Nchos Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="./assets/cycle-logo.ico">
+    </head>
+    <body>
+        <main>
+            <div class="main">
+                <div class="name">
+                    <h1>T-b-t-nchos</h1>
+                    <h2>/ Nchos</h2>
+                    <img id="swapImg" src="./assets/single-color-icon.png" alt="icon">
+                </div>
+                <div class="about">
+                    <p id="p-interested">
+                    <span class="hl">Programming</span> | 
+                    <span class="hl">Server Management</span> | 
+                    <span class="hl">Video</span> | 
+                    <span class="hl">Design</span> | 
+                    <span class="hl">Retro PC&Game</span>
+                    </p>
+                    <p id="p-info">14 y/o, 2011 ~ | Junior high school student | Nigata pref., Japan (UTC+9)</p>
+                </div>
+            </div>
+            <div class="links">
+                <div class="link-row">
+                    <span class="platform">Github:</span>
+                    <span class="id">@T-b-t-nchos</span>
+                    <a class="underline-a" href="https://github.com/T-b-t-nchos" target="_blank">here...</a>
+                </div>
+                <div class="link-row">
+                    <span class="platform">𝕏/Twitter:</span>
+                    <span class="id">@Nchos_T</span>
+                    <a class="underline-a" href="https://x.com/Nchos_T" target="_blank">here...</a>
+                </div>
+                <div class="link-row">
+                    <span class="platform">niconico:</span>
+                    <span class="id">@139611655</span>
+                    <a class="underline-a" href="https://www.nicovideo.jp/user/139611655" target="_blank">here...</a>
+                </div>
+            </div>
+        </main>
+
+        <div class="svg-bottom">
+            <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+                <path d="M0,100 C300,200 1100,0 1440,100 L1440,200 L0,200 Z", fill="#4c8054"></path>
+            </svg>
+        </div>
+        <div class="svg-bottom">
+            <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+                <path 
+                d="M0,75 C300,175 1100,-25 1440,75", 
+                stroke="#73ab79",
+                stroke-width="3",
+                fill="none">
+                </path>
+            </svg>
+        </div>
+
+        <!-- <div class="svg-bottom"> -->
+        <!--     <svg viewBox="0 0 1440 200" preserveAspectRatio="none"> -->
+        <!--         <path d="M 0 76 C 30 134 1217 24 1437 28" -->
+        <!--         fill="none" -->
+        <!--         stroke="#35593a" -->
+        <!--         stroke-width="2" /> -->
+        <!--     </svg> -->
+        <!-- </div> -->
+        <!-- <div class="svg-bottom"> -->
+        <!--     <svg viewBox="0 0 1440 200" preserveAspectRatio="none"> -->
+        <!--         <path d="M 0 150 C 191 69 1236 -92 1431 130" -->
+        <!--         fill="none" -->
+        <!--         stroke="#4c8054" -->
+        <!--         stroke-width="2" /> -->
+        <!--     </svg> -->
+        <!-- </div> -->
+        <!-- <div class="svg-bottom"> -->
+        <!--     <svg viewBox="0 0 1440 200" preserveAspectRatio="none"> -->
+        <!--         <path d="M 0 109 C 419 95 1285 -81 1433 87" -->
+        <!--         fill="none" -->
+        <!--         stroke="#73ab79" -->
+        <!--         stroke-width="3" /> -->
+        <!--     </svg> -->
+        <!-- </div> -->
+
+        <!-- <footer><p>Copyright (c) 2026 T-b-t-nchos</p></footer> -->
+
+        <script>
+            const img = document.getElementById("swapImg");
+
+            const images = [
+                "./assets/single-color-icon.png",
+                "./assets/musasabi.png"
+            ];
+
+            let index = 0;
+            let isAnimating = false;
+
+            img.addEventListener("click", () => {
+                if (isAnimating) return;
+                isAnimating = true;
+
+                img.classList.add("rotate");
+
+                setTimeout(() => {
+                    index = (index + 1) % images.length;
+                    img.src = images[index];
+
+                    img.classList.remove("rotate");
+                    isAnimating = false;
+                }, 600);
+            });
+        </script>
+    </body>
+</html>
