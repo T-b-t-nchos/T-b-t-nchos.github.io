@@ -20,6 +20,12 @@ html {
 /* } */
 
 
+.fade-in {
+    animation: fade-in 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+
 .main {
     /* background-color: #111211; */
     display: flex;
@@ -239,3 +245,16 @@ html {
 /*     pointer-events: none; */
 /*     z-index: 0; */
 /* } */
+
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
