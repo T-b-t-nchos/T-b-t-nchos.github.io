@@ -174,7 +174,6 @@ html {
 .link-row > * {
     display: block;
     font-size: 18px;
-    padding-bottom: 5px;
 }
 
 .platform {
@@ -188,6 +187,7 @@ html {
 .hv-ul {
     position: relative;
     text-decoration: none;
+    padding-bottom: 5px;
 }
 
 .hv-ul::after {
