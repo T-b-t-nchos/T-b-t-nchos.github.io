@@ -184,12 +184,12 @@ html {
     color: #8a8a8a;
 }
 
-.underline-a {
+.ul-a {
     position: relative;
     text-decoration: none;
 }
 
-.underline-a::after {
+.ul-a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -203,7 +203,7 @@ html {
     transition: transform 0.3s ease;
 }
 
-.underline-a:hover::after {
+.ul-a:hover::after {
     transform: scaleX(1);
 }
 
