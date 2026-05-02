@@ -184,12 +184,12 @@ html {
     color: #8a8a8a;
 }
 
-.ul-a {
+.hv-ul {
     position: relative;
     text-decoration: none;
 }
 
-.ul-a::after {
+.hv-ul::after {
     content: "";
     position: absolute;
     left: 0;
@@ -203,7 +203,7 @@ html {
     transition: transform 0.3s ease;
 }
 
-.ul-a:hover::after {
+.hv-ul:hover::after {
     transform: scaleX(1);
 }
 
