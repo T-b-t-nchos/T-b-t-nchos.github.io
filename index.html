@@ -17,11 +17,11 @@
                 </div>
                 <div class="about">
                     <p id="p-interested">
-                    <span class="hl clk hv-ul">Programming</span> |
-                    <span class="hl clk hv-ul">Server Management</span> |
-                    <span class="hl clk hv-ul">Video</span> |
-                    <span class="hl clk hv-ul">Design</span> |
-                    <span class="hl clk hv-ul">Retro PC&Game</span>
+                    <span class="hl open-dialog hv-ul">Programming</span> |
+                    <span class="hl open-dialog hv-ul">Server Management</span> |
+                    <span class="hl open-dialog hv-ul">Video</span> |
+                    <span class="hl open-dialog hv-ul">Design</span> |
+                    <span class="hl open-dialog hv-ul">Retro PC&Game</span>
                     </p>
                     <p id="p-info">14 y/o, 2011 ~ | Junior high school student | Nigata pref., Japan (UTC+9)</p>
                 </div>
@@ -188,7 +188,7 @@
                 `,
             };
 
-            document.querySelectorAll(".clk").forEach(el => {
+            document.querySelectorAll(".open-dialog").forEach(el => {
                 el.addEventListener("click", () => {
                     const key = el.textContent.trim();
 
