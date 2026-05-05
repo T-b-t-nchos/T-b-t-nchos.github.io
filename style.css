@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap');
 
 html {
+    /* My birthday is 2011/12/11, Heisei 23. */
     background-color: #111211;
     background-image: radial-gradient(circle, #232323 2px, transparent 2px);
     background-position: 0 0;
