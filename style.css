@@ -180,6 +180,11 @@ dialog[open] form {
     font-size: 15px;
 }
 
+dialog::backdrop {
+    background: rgba(11, 12, 11, 0.2);
+    backdrop-filter: blur(1px);
+}
+
 #close-btn {
     color: #73ab79;
     /* padding: 3px; */
