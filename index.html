@@ -130,6 +130,9 @@
             });
 
 
+
+
+
             const dialog = document.getElementById("modal");
             const title = document.getElementById("modal-title");
             const content = document.getElementById("modal-content");
@@ -215,7 +218,12 @@
                     const key = el.textContent.trim();
 
                     title.textContent = key;
-                    content.innerHTML = modalData[key] || "Nothing to show... sorry.";
+                    const emojiRegex = /\p{Extended_Pictographic}/gu;
+
+                    content.innerHTML = (modalData[key] || "Nothing to show... sorry.")
+                        .replace(emojiRegex, match =>
+                            `<span class="noto-emoji">${match}</span>`
+                        );
 
                     dialog.showModal();
                 });
