@@ -43,16 +43,28 @@ jobs:
         uses: actions/deploy-pages@v5
 
   cf-pages:
-    environment:
-      name: cloudflare-pages
-      url: "https://t-b-t-nchos.pages.dev"
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
-      - name: Deploy
-        uses: cloudflare/wrangler-action@v4
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          command: pages deploy . --project-name="t-b-t-nchos"
+      environment:
+          name: cloudflare-pages
+          url: https://t-b-t-nchos.pages.dev
+      runs-on: ubuntu-latest
+
+      steps:
+          - uses: actions/checkout@v4
+
+          - name: Deploy Production
+            if: github.ref == 'refs/heads/master'
+            uses: cloudflare/wrangler-action@v4
+            with:
+                apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+                accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+                gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+                command: pages deploy . --project-name=t-b-t-nchos --branch=master
+
+          - name: Deploy Preview
+            if: github.ref != 'refs/heads/master'
+            uses: cloudflare/wrangler-action@v4
+            with:
+                apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+                accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+                gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+                command: pages deploy . --project-name=t-b-t-nchos --branch=${{ github.ref_name }}
