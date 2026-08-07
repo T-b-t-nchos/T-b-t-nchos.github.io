@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&display=swap');
 
 html {
+    width: 100%;
+    height: 100%;
+
     /* My birthday is 2011/12/11, Heisei 23. */
     background-color: #111211;
     background-image: radial-gradient(circle, #232323 2px, transparent 2px);
@@ -28,50 +31,46 @@ html {
     animation-fill-mode: forwards;
 }
 
+.first-block {
+    position: relative;
+    margin-top: clamp(10%, 15%, 15%);
 
-.main {
-    /* background-color: #111211; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* height: 100vh; */
+    width: 37%;
+    margin-left: 7%;
+
+
 }
 
-.name {
-    margin: 0;
-    padding: 0;
-
-    position: absolute;
-    left: 7%;
-    top: 36%;
-
-    display: flex;
-    align-items: baseline;
-    gap: 30px;
-
-    padding-left: 20px;
-    margin-bottom: 25px;
-
-    justify-content: space-between;
-}
-
-.name::before {
+.first-block::before {
     content: "";
     position: absolute;
-    padding: 0px;
-    margin: 0px;
 
+    top: -0.5em;
     left: -5px;
-    top: -10px;
-    bottom: -75px;
+    bottom: -1em;
 
     width: 1.5px;
     background: #35593a;
 }
 
+
+
+.name {
+    padding: 0;
+    padding-left: 20px;
+
+    position: relative;
+    white-space: nowrap;
+
+    display: flex;
+    align-items: baseline;
+}
+
+
 .name::after {
     content: "";
     position: absolute;
+    width: 100%;
     left: -5px;
     right: -2px;
     bottom: -6px;
@@ -94,34 +93,34 @@ html {
 }
 
 .name h1 {
-    font-size: 30px;
+    font-size: clamp(22px, 27px, 30px);
     color: #73ab79;
     letter-spacing: 3.0px;
+
+    padding-right: 2em;
 }
 
 .name h2 {
-    font-size: 15px;
+    font-size: clamp(12px, 13px, 15px);
     color: #aaaaaa;
     letter-spacing: 2.0px;
 }
 
 .name img {
     width: 25px;
-    margin-left: 400px;
+    margin-left: auto;
+    margin-right: 3px;
 }
 
 .about {
-    position: absolute;
-    left: 7%;
+    position: relative;
     padding-left: 20px;
-    margin-top: 16px;
+    margin-top: 1em;
     margin-bottom: 20px;
-
-    top: calc(35% + 8px + 2px + 20px + 10px);
 }
 
 .about p {
-    font-size: 17px;
+    font-size: clamp(11px, 15px, 17px);
     color: #555555;
     margin: 0px;
     margin-bottom: 3px;
@@ -254,10 +253,12 @@ dialog::backdrop {
 }
 
 .links {
-    position: absolute;
+    position: relative;
 
-    left: 7%;
-    top: calc(35% + 8px + 2px + 20px + 15%);
+    margin-left: 7%;
+    width: fit-content;
+
+    margin-top: 5em;
     padding-left: 20px;
 
     display: flex;
@@ -275,7 +276,7 @@ dialog::backdrop {
 
 .link-row > * {
     display: block;
-    font-size: 18px;
+    font-size: clamp(16px, 2vw, 18px);
 }
 
 .platform {
@@ -308,6 +309,7 @@ dialog::backdrop {
 }
 
 .hv-ul:hover::after {
+    position: absolute;
     transform: scaleX(1);
 }
 
@@ -321,7 +323,7 @@ dialog::backdrop {
     bottom: 0;
 
     width: 100%;
-    height: 150px;
+    height: 170px;
 
     pointer-events: none;
     z-index: 0;
@@ -365,3 +367,44 @@ dialog::backdrop {
 }
 
 
+
+/* タブレット, スマホ */
+@media (max-width: 1023px) {
+    main {
+    width: 100%;}
+
+    .first-block {
+        right: -3px;
+    }
+
+    .name img {
+        display: none;
+    }
+
+
+    .name,
+    .about{
+        width: 200%;
+    }
+
+    span {
+        display: block;
+    }
+
+    .sep {
+        display: none !important;
+    }
+
+    .links {
+        width: fit-content;
+    }
+
+    .link-row {
+        grid-template-columns: 14em auto;
+        padding-right: 2em;
+    }
+
+    .link-row .id {
+        display: none;
+    }
+}
