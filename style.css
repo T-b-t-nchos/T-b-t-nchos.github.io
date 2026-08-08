@@ -110,6 +110,7 @@ html {
     width: 25px;
     margin-left: auto;
     margin-right: 3px;
+    align-self: flex-end;
 }
 
 .about {
