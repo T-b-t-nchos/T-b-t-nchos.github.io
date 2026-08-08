@@ -313,7 +313,7 @@ dialog::backdrop {
 
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .hv-ul:hover::after {
