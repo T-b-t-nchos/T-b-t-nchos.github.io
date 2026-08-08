@@ -30,7 +30,7 @@
                     <span class="hl open-dialog hv-ul">Retro PC&Game</span>
                     </p>
                     <p id="p-info">
-                    <span>14 y/o, 2011 ~</span> <span class="sep">|</span>
+                    <span><output id="age"></output> y/o, 2011 ~</span> <span class="sep">|</span>
                     <span>Junior high school student</span> <span class="sep">|</span>
                     <span>Nigata pref., Japan (UTC+9)</span>
                     </p>
@@ -144,7 +144,18 @@
             });
 
 
+            const birthYear = 2011;
+            const birthMonth = 12;
 
+            const today = new Date();
+
+            let age = today.getFullYear() - birthYear;
+
+            if (today.getMonth() + 1 < birthMonth) {
+                age--;
+            }
+
+            document.getElementById("age").textContent = age;
 
 
             const dialog = document.getElementById("modal");
