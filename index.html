@@ -23,11 +23,11 @@
                 </div>
                 <div class="about">
                     <p id="p-interested">
-                    <span class="hl open-dialog hv-ul">Programming</span> <span class="sep">|</span>
-                    <span class="hl open-dialog hv-ul">Server Management</span> <span class="sep">|</span>
-                    <span class="hl open-dialog hv-ul">Video</span> <span class="sep">|</span>
-                    <span class="hl open-dialog hv-ul">Design</span> <span class="sep">|</span>
-                    <span class="hl open-dialog hv-ul">Retro PC&Game</span>
+                    <span class="hl open-dialog hv-ul" id="programming">Programming</span> <span class="sep">|</span>
+                    <span class="hl open-dialog hv-ul" id="server">Server Management</span> <span class="sep">|</span>
+                    <span class="hl open-dialog hv-ul" id="video">Video</span> <span class="sep">|</span>
+                    <span class="hl open-dialog hv-ul" id="design">Design</span> <span class="sep">|</span>
+                    <span class="hl open-dialog hv-ul" id="retro-and-game">Retro PC&Game</span>
                     </p>
                     <p id="p-info">
                     <span><output id="age"></output> y/o, 2011 ~</span> <span class="sep">|</span>
@@ -163,7 +163,7 @@
             const content = document.getElementById("modal-content");
 
             const modalData = {
-                "Programming":
+                "programming":
                 `
                 I'm usually working on <span class="hl">C#</span>, <span class="hl">lua</span>, and <span class="hl">html/css</span>.<br>
                 I'm also interested in <span class="hl">Python</span>, and <span class="hl">C++</span>.<br>
@@ -183,7 +183,7 @@
                 <li>🤔and many more...?</li>
                 </ul>
                 `,
-                "Server Management":
+                "server":
                 `
                 <h4>I'm currently hosting:</h4>
                 <ul>
@@ -198,7 +198,7 @@
                 <li>and so on...</li>
                 </ul>
                 `,
-                "Video":
+                "video":
                 `
                 I'm currently <span class="hl">learning</span> and <span class="hl">using</span> <span class="hl">"Yukkuri Movie Maker 4"</span>.<br>
                 <br>
@@ -208,7 +208,7 @@
                 <li><a class="hl hv-ul" href=""></a></li>
                 </ul>
                 `,
-                "Design":
+                "design":
                 `
                 I'm currently <span class="hl">learning</span> and creating design work.<br>
                 <br>
@@ -222,7 +222,7 @@
                 <li><a class="hl hv-ul" href="/">And this website✨️</a></li>
                 </ul>
                 `,
-                "Retro PC&Game":
+                "retro-and-game":
                 `
                 I love <span class="hl">PC98</span> series and <span class="hl">FM music</span>.<br>
                 <br>
@@ -240,9 +240,9 @@
 
             document.querySelectorAll(".open-dialog").forEach(el => {
                 el.addEventListener("click", () => {
-                    const key = el.textContent.trim();
+                    const key = el.id;
 
-                    title.textContent = key;
+                    title.textContent = el.textContent;
                     const emojiRegex = /\p{Extended_Pictographic}/gu;
 
                     content.innerHTML = (modalData[key] || "Nothing to show... sorry.")
