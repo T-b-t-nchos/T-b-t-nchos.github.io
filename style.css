@@ -115,6 +115,8 @@ html {
     margin-right: 3px;
     align-self: flex-end;
 
+    cursor: pointer;
+
     transform: scaleX(var(--flip, 1));
 }
 
