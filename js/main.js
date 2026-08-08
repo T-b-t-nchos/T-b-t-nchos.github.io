@@ -1,3 +1,20 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".hv-ul");
+
+    elements.forEach((el) => {
+        el.classList.add("intro");
+
+        el.addEventListener("mouseenter", () => {
+            el.classList.remove("intro");
+        });
+
+        setTimeout(() => {
+            el.classList.remove("intro");
+        }, 2700 /*Animation delay + Animation duration*/);
+    });
+});
+
+
 const img = document.getElementById("swapImg");
 
 const images = [
