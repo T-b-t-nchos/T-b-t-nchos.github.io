@@ -85,11 +85,14 @@ html {
     line-height: 1;
     font-weight: 400;
     text-align: left;
-    transition: transform 0.6s ease;
+    transition: transform 0.3s ease;
 }
 
 .rotate {
-    transform: rotateY(360deg);
+    transform: rotateY(90deg) scaleX(var(--flip, 1));
+}
+.rotate-end {
+    transform: rotateY(180deg) scaleX(var(--flip, 1));
 }
 
 .name h1 {
@@ -111,6 +114,8 @@ html {
     margin-left: auto;
     margin-right: 3px;
     align-self: flex-end;
+
+    transform: scaleX(var(--flip, 1));
 }
 
 .about {

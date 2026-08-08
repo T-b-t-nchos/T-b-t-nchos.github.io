@@ -10,6 +10,7 @@ let isAnimating = false;
 
 img.addEventListener("click", () => {
     if (isAnimating) return;
+
     isAnimating = true;
 
     img.classList.add("rotate");
@@ -18,9 +19,25 @@ img.addEventListener("click", () => {
         index = (index + 1) % images.length;
         img.src = images[index];
 
+        img.style.setProperty(
+            "--flip",
+            index % 2 === 1 ? "-1" : "1"
+        );
+
+        img.classList.add("rotate-end");
         img.classList.remove("rotate");
-        isAnimating = false;
-    }, 600);
+
+        setTimeout(() => {
+            img.style.transition = "none";
+            img.classList.remove("rotate-end");
+
+            void img.offsetWidth;
+
+            img.style.transition = "";
+
+            isAnimating = false;
+        }, 300);
+    }, 300);
 });
 
 
