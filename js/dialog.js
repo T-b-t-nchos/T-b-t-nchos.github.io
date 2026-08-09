@@ -47,3 +47,8 @@ document.querySelectorAll(".open-dialog").forEach(el => {
     });
 });
 
+dialog.addEventListener("click", event => {
+    if (event.target === dialog) {
+        dialog.close();
+    }
+});
