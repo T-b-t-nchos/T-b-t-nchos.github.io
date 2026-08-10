@@ -425,6 +425,10 @@ dialog::backdrop {
         width: 200%;
     }
 
+    .hv-ul {
+        width: fit-content;
+    }
+
     span {
         display: block;
     }
