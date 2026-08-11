@@ -416,7 +416,7 @@ dialog::backdrop {
     width: 100%;}
 
     .first-block {
-        right: -3px;
+        /* right: -3px; */
     }
 
     .name img {
