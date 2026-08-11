@@ -447,7 +447,7 @@ dialog::backdrop {
 
     .link-row {
         grid-template-columns: 14em auto;
-        padding-right: 2em;
+        padding-right: 1em;
     }
 
     .link-row .id {
