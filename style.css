@@ -424,7 +424,11 @@ dialog::backdrop {
     }
 
 
-    .name,
+    .name {
+        width: max-content;
+        padding-right: 0.75em;
+    }
+
     .about{
         width: 200%;
     }
