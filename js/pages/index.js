@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
 const img = document.getElementById("swapImg");
 
 const images = [
-    "./assets/single-color-icon.png",
-    "./assets/musasabi.png"
+    "/assets/single-color-icon.png",
+    "/assets/musasabi.png"
 ];
 
 let index = 0;
