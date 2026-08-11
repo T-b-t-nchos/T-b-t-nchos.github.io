@@ -1,0 +1,22 @@
+.fade-in {
+    animation: fade-in 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.rotate {
+    transform: rotateY(90deg) scaleX(var(--flip, 1));
+}
+.rotate-end {
+    transform: rotateY(180deg) scaleX(var(--flip, 1));
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
