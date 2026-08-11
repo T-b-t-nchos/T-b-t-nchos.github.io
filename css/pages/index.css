@@ -1,5 +1,6 @@
 .first-block {
     position: relative;
+    margin-top: clamp(10%, 14%, 14%);
 
     width: 37%;
     margin-left: 7%;
@@ -100,6 +101,41 @@
     letter-spacing: 1.8px;
 }
 
+.portfolio-link::before {
+    content: "";
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+
+    top: -0.5em;
+    left: -5px;
+    bottom: -0.5em;
+
+    width: 1.5px;
+    background: #35593a;
+}
+
+.portfolio-link {
+    position: relative;
+
+    margin-left: 7%;
+    width: fit-content;
+
+    margin-top: 4em;
+    margin-bottom: 20px;
+    padding-left: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    letter-spacing: 1.8px;
+}
+
+.sp-link {
+    color: #73ab79;
+    font-size: clamp(16px, 2vw, 18px);
+}
+
 .second-block {
     padding-bottom: 100px; /* for super wide screen */
 }
@@ -124,6 +160,7 @@
     margin-left: 7%;
     width: fit-content;
 
+    margin-top: 4em;
     padding-left: 20px;
 
     display: flex;
