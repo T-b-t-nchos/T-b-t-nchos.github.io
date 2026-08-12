@@ -9,6 +9,7 @@
 .first-block::before {
     content: "";
     position: absolute;
+    z-index: 100;
 
     top: -0.5em;
     left: -5px;
