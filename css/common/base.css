@@ -7,9 +7,9 @@
 
     --hl-lv1-color: light-dark(#73ab79, #73ab79);
     --hl-lv2-color: light-dark(#73ab79, #35593a);
-    --hl-lv3-color: light-dark(#555555, #cccccc);
-    --hl-lv4-color: light-dark(#8a8a8a, #aaaaaa);
-    --hl-lv5-color: light-dark(#aaaaaa, #8a8a8a);
+    --hl-lv3-color: light-dark(#232323, #cccccc);
+    --hl-lv4-color: light-dark(#555555, #aaaaaa);
+    --hl-lv5-color: light-dark(#8a8a8a, #8a8a8a);
 
     --border-color: light-dark(#73ab79, #73ab79);
 
