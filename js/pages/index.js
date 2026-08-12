@@ -22,7 +22,10 @@ const images = [
     "/assets/musasabi.png"
 ];
 
+const animationDuration = 200;
+
 let index = 0;
+let rotation = 0;
 let isAnimating = false;
 
 img.addEventListener("click", () => {
@@ -30,26 +33,29 @@ img.addEventListener("click", () => {
 
     isAnimating = true;
 
-    img.classList.add("rotate");
+    rotation += 90;
+
+    img.style.setProperty(
+        "--rotation",
+        `${rotation}deg`
+    );
 
     setTimeout(() => {
         index = (index + 1) % images.length;
 
         img.src = images[index];
 
+        rotation += 90;
+
         img.style.setProperty(
-            "--flip",
-            index % 2 === 0 ? "-1" : "1"
+            "--rotation",
+            `${rotation}deg`
         );
 
-        img.classList.remove("rotate");
-        img.classList.add("rotate-end");
-
         setTimeout(() => {
-            img.classList.remove("rotate-end");
             isAnimating = false;
-        }, 300);
-    }, 300);
+        }, animationDuration);
+    }, animationDuration);
 });
 
 
