@@ -1,5 +1,5 @@
 .hl {
-    color: #cccccc;
+    color: var(--hl-lv3-color);
 }
 
 .hv-ul {

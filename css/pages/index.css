@@ -15,7 +15,7 @@
     bottom: -1em;
 
     width: 1.5px;
-    background: #35593a;
+    background: var(--hl-lv2-color);
 }
 
 
@@ -40,7 +40,7 @@
     right: -2px;
     bottom: -6px;
     height: 2px;
-    background: #73ab79;
+    background: var(--hl-lv1-color);
 }
 
 .name h1,
@@ -56,7 +56,7 @@
 
 .name h1 {
     font-size: clamp(22px, 27px, 30px);
-    color: #73ab79;
+    color: var(--hl-lv1-color);
     letter-spacing: 3.0px;
 
     padding-right: 2em;
@@ -64,7 +64,7 @@
 
 .name h2 {
     font-size: clamp(12px, 13px, 15px);
-    color: #aaaaaa;
+    color: var(--hl-lv4-color);
     letter-spacing: 2.0px;
 }
 
@@ -88,7 +88,7 @@
 
 .about p {
     font-size: clamp(11px, 15px, 17px);
-    color: #555555;
+    color: var(--text-color);
     margin: 0px;
     margin-bottom: 3px;
 }
@@ -112,7 +112,7 @@
     bottom: -0.5em;
 
     width: 1.5px;
-    background: #35593a;
+    background: var(--hl-lv2-color);
 }
 
 .portfolio-link {
@@ -132,7 +132,7 @@
 }
 
 .sp-link {
-    color: #73ab79;
+    color: var(--hl-lv1-color);
     font-size: clamp(16px, 2vw, 18px);
 }
 
@@ -151,7 +151,7 @@
     bottom: -50px;
 
     width: 1.5px;
-    background: #35593a;
+    background: var(--hl-lv2-color);
 }
 
 .links {
@@ -182,16 +182,16 @@
 }
 
 .platform {
-    color: #cccccc;
+    color: var(--hl-lv3-color);
 }
 
 .id {
-    color: #8a8a8a;
+    color: var(--hl-lv5-color);
 }
 
 
 .links a {
-    color: #73ab79;
+    color: var(--hl-lv1-color);
 }
 
 .svg-bottom {

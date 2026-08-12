@@ -1,10 +1,39 @@
+:root {
+    color-scheme: light dark;
+
+    --bg-color: light-dark(#eeedee, #111211);
+    --bg-dot-color: light-dark(#dcdcdc, #232323);
+    --text-color: light-dark(#aaaaaa, #555555);
+
+    --hl-lv1-color: light-dark(#73ab79, #73ab79);
+    --hl-lv2-color: light-dark(#73ab79, #35593a);
+    --hl-lv3-color: light-dark(#555555, #cccccc);
+    --hl-lv4-color: light-dark(#8a8a8a, #aaaaaa);
+    --hl-lv5-color: light-dark(#aaaaaa, #8a8a8a);
+
+    --border-color: light-dark(#73ab79, #73ab79);
+
+    --dialog-bg-color: light-dark(rgba(243, 243, 243, 0.35), rgba(12, 12, 12, 0.35));
+    --dialog-backdrop-color: light-dark(rgba(244, 243, 244, 0.2), rgba(11, 12, 11, 0.2));
+    --dialog-text-color: light-dark(#aaaaaa, #8a8a8a);
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+
 html {
     width: 100%;
     height: 100%;
 
     /* My birthday is 2011/12/11, Heisei 23. */
-    background-color: #111211;
-    background-image: radial-gradient(circle, #232323 2px, transparent 2px);
+    background-color: var(--bg-color);
+    background-image: radial-gradient(circle, var(--bg-dot-color) 2px, transparent 2px);
     background-position: 0 0;
     background-size: 22px 22px;
 
