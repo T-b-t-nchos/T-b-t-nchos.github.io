@@ -16,6 +16,8 @@
     --dialog-bg-color: light-dark(rgba(243, 243, 243, 0.35), rgba(12, 12, 12, 0.35));
     --dialog-backdrop-color: light-dark(rgba(244, 243, 244, 0.2), rgba(11, 12, 11, 0.2));
     --dialog-text-color: light-dark(#aaaaaa, #8a8a8a);
+
+    --warning-color: light-dark(#ced175, #ced175);
 }
 
 :root[data-theme="light"] {
