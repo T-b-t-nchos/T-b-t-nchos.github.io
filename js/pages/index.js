@@ -34,24 +34,19 @@ img.addEventListener("click", () => {
 
     setTimeout(() => {
         index = (index + 1) % images.length;
+
         img.src = images[index];
 
         img.style.setProperty(
             "--flip",
-            index % 2 === 1 ? "-1" : "1"
+            index % 2 === 0 ? "-1" : "1"
         );
 
-        img.classList.add("rotate-end");
         img.classList.remove("rotate");
+        img.classList.add("rotate-end");
 
         setTimeout(() => {
-            img.style.transition = "none";
             img.classList.remove("rotate-end");
-
-            void img.offsetWidth;
-
-            img.style.transition = "";
-
             isAnimating = false;
         }, 300);
     }, 300);
