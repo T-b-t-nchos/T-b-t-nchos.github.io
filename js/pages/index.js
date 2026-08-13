@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll(".hv-ul");
+    const elements = document.querySelectorAll(".hv-ul-intro");
 
     elements.forEach((el) => {
         el.classList.add("intro");
