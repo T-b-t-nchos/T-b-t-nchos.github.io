@@ -1,16 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll(".hv-ul-intro");
+    const elements = document.querySelectorAll('[class*="hv-ul-intro"]');
 
     elements.forEach((el) => {
-        el.classList.add("intro");
+        const className = [...el.classList]
+            .find(className => className.startsWith("hv-ul-intro"));
 
-        el.addEventListener("mouseenter", () => {
-            el.classList.remove("intro");
-        });
+        if (!className) return;
+
+        const num = Number(className.split("|")[1]);
+
+        if (num === undefined) num = 0;
 
         setTimeout(() => {
-            el.classList.remove("intro");
-        }, 2700 /*Animation delay + Animation duration*/);
+            el.classList.add("intro");
+
+            el.addEventListener("mouseenter", () => {
+                el.classList.remove("intro");
+            });
+
+            setTimeout(() => {
+                el.classList.remove("intro");
+            }, 2700 /*Animation delay + Animation duration*/);
+        }, num);
     });
 });
 
