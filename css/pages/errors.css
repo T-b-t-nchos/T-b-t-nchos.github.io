@@ -68,3 +68,24 @@ body {
     color: var(--hl-lv5-color);
     letter-spacing: 2.0px;
 }
+
+@media (max-width: 428px) {
+    .error-page h1 {
+        width: 90%;
+
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .error-page h1::after {
+        width: 100%;
+    }
+
+    .error-page p {
+        letter-spacing: 4px;
+    }
+
+    .error-page .noto-emoji {
+        display: none;
+    }
+}
