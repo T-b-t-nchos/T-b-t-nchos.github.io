@@ -8,11 +8,81 @@
         <link rel="stylesheet" href="/css/pages/errors.css">
         <link rel="icon" href="/assets/cycle-logo.ico">
         <meta name="robots" content="unindex">
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+html {
+    font-family: "Caveat", "Zen Kaku Gothic New", sans-serif;
+}
+
+.error-page h1 {
+    background: light-dark(
+        linear-gradient(
+            90deg,
+            #5a2121,
+            #785430 33%,
+            #9a6f5d 66%,
+            #ceb199
+                ),
+        linear-gradient(
+            90deg,
+            #785430,
+            #9a6f5d 33%,
+            #ceb199 66%,
+            #e1d4c0
+                )
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    font-weight: 600;
+}
+
+.error-page h1::after {
+    background: linear-gradient(
+        90deg,
+        #5a2121,
+        #785430 25%,
+        #9a6f5d 50%,
+        #ceb199 75%,
+        #e1d4c0
+            );
+}
+
+.error-page p {
+    font-weight: 500;
+}
+
+.error-page a {
+    font-weight: 500;
+}
+
+.hv-ul {
+    transition:
+        color 2.5s ease !important;
+}
+
+.hv-ul::after {
+    transition:
+        transform 2.5s ease;
+}
+
+.hv-ul:hover::after {
+    transition:
+        transform 2.5s ease;
+}
+
+.hv-ul:hover {
+    color: light-dark(#5a2121, #ceb199);
+}
+        </style>
     </head>
     <body data-error="418">
         <main class="fade-in">
             <div class="error-page">
-                <h1 style="color: #da3500;">
+                <h1>
                     <span class="noto-emoji">🫖</span>
                     <span class="error-code"></span>
                     /
