@@ -266,4 +266,7 @@ if (today.getMonth() + 1 < birthMonth) {
     age--;
 }
 
-document.getElementById("age").textContent = age;
+const ageElement = document.getElementById("age");
+if (ageElement) {
+    ageElement.textContent = age;
+}
