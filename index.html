@@ -1,102 +1,245 @@
-<!DOCTYPE HTML>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ja">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>T-b-t-nchos/Nchos Website</title>
-        <link rel="stylesheet" href="/css/common/COMMON.css">
-        <link rel="stylesheet" href="/css/pages/index.css">
+
+        <title>T-b-t-nchos</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Noto+Emoji:wght@300..700&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
         <link rel="icon" href="./assets/cycle-logo.ico">
+        <link rel="canonical" href="https://t-b-t.nchos.net/index.html">
+
         <meta name="description" content="T-b-t-nchos/Nchos Website.">
         <meta name="robots" content="index, follow">
         <meta name="keywords" content="T-b-t-nchos, Nchos, portfolio, personal, website">
         <meta name="author" content="T-b-t-nchos">
-        <link rel="canonical" href="https://t-b-t.nchos.net/index.html">
         <meta name="theme-color" content="#111211">
+        <meta name="color-scheme" content="light dark">
     </head>
+
     <body>
-        <main class="fade-in">
-            <div class="first-block">
-                <div class="name">
-                    <h1>T-b-t-nchos</h1>
-                    <h2>/ Nchos</h2>
-                    <img id="swapImg" src="./assets/single-color-icon.png" alt="icon">
+        <main>
+            <section class="hero">
+                <div class="shape shape-n" aria-hidden="true">N</div>
+                <canvas id="particles" aria-hidden="true"></canvas>
+
+                <div class="hero-content">
+                    <h1 class="title fit-text">T-b-t-nchos</h1>
+                    <p class="subtitle fit-text">↓<a href="#works" class="hv-ul"">Works</a> / <a href="#history" class="hv-ul">History</a>↓</p>
                 </div>
-                <div class="about">
-                    <p id="p-interested">
-                    <span class="hl open-dialog hv-ul hv-cc hv-ul-intro|000" id="programming">Programming</span> <span class="sep">|</span>
-                    <span class="hl open-dialog hv-ul hv-cc hv-ul-intro|100" id="server">Server Management</span> <span class="sep">|</span>
-                    <span class="hl open-dialog hv-ul hv-cc hv-ul-intro|200" id="video">Video</span> <span class="sep">|</span>
-                    <span class="hl open-dialog hv-ul hv-cc hv-ul-intro|300" id="design">Design</span> <span class="sep">|</span>
-                    <span class="hl open-dialog hv-ul hv-cc hv-ul-intro|400" id="retro-and-game">Retro PC&Game</span>
-                    </p>
-                    <p id="p-info">
-                    <span><output id="age"></output> y/o, 2011 ~</span> <span class="sep">|</span>
-                    <span>Junior high school student</span> <span class="sep">|</span>
-                    <span>Nigata pref., Japan (UTC+9)</span>
-                    </p>
-                </div>
-            </div>
-            <div class="portfolio-link">
-                <a class="hv-ul hv-ul-intro|100 sp-link" href="portfolio/index.html">&gt;&gt; Portfolio</a>
-            </div>
-            <div class="second-block">
-                <div class="links">
-                    <div class="link-row">
-                        <span class="platform">Github:</span>
-                        <span class="id">@T-b-t-nchos</span>
-                        <a class="hv-ul hv-ul-intro|450" href="https://github.com/T-b-t-nchos" target="_blank">here...</a>
-                    </div>
-                    <div class="link-row">
-                        <span class="platform">𝕏/Twitter:</span>
-                        <span class="id">@Nchos_T</span>
-                        <a class="hv-ul hv-ul-intro|550" href="https://x.com/Nchos_T" target="_blank">here...</a>
-                    </div>
-                    <div class="link-row">
-                        <span class="platform">niconico:</span>
-                        <span class="id">@139611655</span>
-                        <a class="hv-ul hv-ul-intro|650" href="https://www.nicovideo.jp/user/139611655" target="_blank">here...</a>
-                    </div>
-                    <div class="link-row">
-                        <span class="platform">Qiita:</span>
-                        <span class="id">@T-b-t-nchos</span>
-                        <a class="hv-ul hv-ul-intro|750" href="https://qiita.com/T-b-t-nchos" target="_blank">here...</a>
-                    </div>
-                    <div class="link-row">
-                        <span class="platform">Zenn:</span>
-                        <span class="id">@nchos</span>
-                        <a class="hv-ul hv-ul-intro|850" href="https://zenn.dev/nchos" target="_blank">here...</a>
+
+                <div class="shape shape-t" aria-hidden="true">T</div>
+            </section>
+
+            <section class="section" id="whoami">
+                <div class="section-inner">
+                    <header class="section-heading">
+                        <span class="section-label">◆ 🤔Who am I?</span>
+                    </header>
+                    <div class="whoami-content">
+                        <p class="whoami-summary">Programming, Server Management, Video, Design, Retro PC, Game<br>
+                        <span id="age"></span> y/o 2011 ~, Junior high school student, Nigata pref., Japan (UTC+9) </p>
+                        <p class="whoami-detail">I'm a Japanese software engineer and a hobbyist programmer.
+                        <br>I mainly develop Neovim plugins, CLI tools, and web apps.</p>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <section class="section" id="links">
+                <div class="section-inner">
+                    <header class="section-heading">
+                        <span class="section-label">◆ 🔗Links</span>
+                    </header>
+
+                    <div class="list">
+                        <a class="list-item" href="https://github.com/T-b-t-nchos/" aria-label="View GitHub page">
+                            <div class="list-index">01</div>
+
+                            <div class="list-content">
+                                <h2>GitHub</h2>
+                                <p>@T-b-t-nchos</p>
+                            </div>
+
+                            <span class="list-view">VIEW →</span>
+                        </a>
+
+                        <a class="list-item" href="https://x.com/Nchos_T" aria-label="View Twitter/X page">
+                            <div class="list-index">02</div>
+
+                            <div class="list-content">
+                                <h2>𝕏/Twitter</h2>
+                                <p>@Nchos_T</p>
+                            </div>
+
+                            <span class="list-view">VIEW →</span>
+                        </a>
+
+                        <a class="list-item" href="https://www.nicovideo.jp/user/139611655" aria-label="View ️niconico page">
+                            <div class="list-index">03</div>
+
+                            <div class="list-content">
+                                <h2>️niconico</h2>
+                                <p>@139611655</p>
+                            </div>
+
+                            <span class="list-view">VIEW →</span>
+                        </a>
+
+                        <a class="list-item" href="https://qiita.com/T-b-t-nchos" aria-label="View Qiita page">
+                            <div class="list-index">04</div>
+
+                            <div class="list-content">
+                                <h2>Qiita</h2>
+                                <p>@T-b-t-nchos</p>
+                            </div>
+
+                            <span class="list-view">VIEW →</span>
+                        </a>
+
+                        <a class="list-item" href="https://zenn.dev/nchos" aria-label="View Zenn page">
+                            <div class="list-index">05</div>
+
+                            <div class="list-content">
+                                <h2>Zenn</h2>
+                                <p>@nchos</p>
+                            </div>
+
+                            <span class="list-view">VIEW →</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="works">
+                <div class="section-inner">
+                    <header class="section-heading">
+                        <span class="section-label">◆ 💡Works & Products</span>
+                    </header>
+
+                    <h3>◇ Programming</h3>
+
+                    <div class="list">
+                        <a class="list-item has-preview" href="https://github.com/T-b-t-nchos/Aquavium.nvim" aria-label="View Aquavium.nvim">
+                            <div class="list-index">01</div>
+
+                            <div class="list-content">
+                                <h2>Aquavium.nvim</h2>
+                                <p>Aquarium color scheme, designed for transparent terminal.</p>
+
+                                <img class="list-item-preview" src="./assets/works/programming/Aquavium.nvim/SocialPreview_v2.png" alt="" aria-hidden="true" />
+                            </div>
+
+                            <span class="list-view">VIEW →</span>
+                        </a>
+
+                        <a class="list-item" href="https://github.com/T-b-t-nchos/FMP7.nvim" aria-label="View FMP7.nvim">
+                            <div class="list-index">02</div>
+
+                            <div class="list-content">
+                                <h2>FMP7.nvim</h2>
+                                <p>A Neovim plugin to control FMP7 (FM Music Drv.).</p>
+                            </div>
+
+                            <span class="list-view">VIEW →</span>
+                        </a>
+
+                        <a class="list-item has-preview" href="https://github.com/T-b-t-nchos/nothing.nvim" aria-label="View ️nothing.nvim">
+                            <div class="list-index">03</div>
+
+                            <div class="list-content">
+                                <h2>️nothing.nvim</h2>
+                                <p>Just one color. Nothing else. (Joke.) </p>
+
+                                <img class="list-item-preview" src="./assets/works/programming/nothing.nvim/SocialPreview_dark.png" alt="" aria-hidden="true" />
+                            </div>
+
+                            <span class="list-view">VIEW →</span>
+                        </a>
+
+                        <a class="list-item" href="https://github.com/T-b-t-nchos/sshhub" aria-label="View sshhub">
+                            <div class="list-index">04</div>
+
+                            <div class="list-content">
+                                <h2>sshhub</h2>
+                                <p>A CLI tool to easily multiple SSH connections.</p>
+                            </div>
+
+                            <span class="list-view">VIEW →</span>
+                        </a>
+
+                        <a class="list-item" href="https://github.com/T-b-t-nchos/mm2f" aria-label="View mm2f">
+                            <div class="list-index">05</div>
+
+                            <div class="list-content">
+                                <h2>mm2f</h2>
+                                <p>[M]ultiple package [M]anager packages [To] a [F]ile.</p>
+                            </div>
+
+                            <span class="list-view">VIEW →</span>
+                        </a>
+                    </div>
+
+                    <br><br>
+                    <h3>◇ Video</h3>
+
+                    <div class="list">
+                        <a class="list-item has-preview" href="https://youtu.be/301fBL1R4Mo" aria-label="View promo video of first LT event at sf-kosen">
+                            <div class="list-index">2025</div>
+
+                            <div class="list-content">
+                                <h2>湘南藤沢高専 Discordキャンパス「第1回LTイベント　PR動画」</h2>
+                                <p>A promo video for a LT event at the Shonan Fujisawa Kosen Discord campus (sf-kosen, a fictional college)</p>
+
+                                <img class="list-item-preview" src="./assets/works/video/sf-kosen-first-lt-PR/Screenshot.png" alt="" aria-hidden="true" />
+                            </div>
+
+                            <span class="list-view">WATCH →</span>
+                        </a>
+                    </div>
+
+                    <br><br>
+                    <h3>◇ Design</h3>
+
+                    <div class="list">
+                        <a class="list-item has-preview" href="https://nandemo.tanahiro2010.com/" aria-label="View OGP of Nandemo-Mondaichou">
+                            <div class="list-index">2026</div>
+
+                            <div class="list-content">
+                                <h2>OGP of 「なんでも単語帳」</h2>
+                                <p>OGP image for Nandemo-Mondaichou, a practice problem website created by tanahiro2010</p>
+
+                                <img class="list-item-preview" src="./assets/works/design/ogp-of-nandemo/og-image.png" alt="" aria-hidden="true" />
+                            </div>
+
+                            <span class="list-view">VIEW →</span>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="section" id="history">
+                <div class="section-inner">
+                    <header class="section-heading">
+                        <span class="section-label">◆ 📗History</span>
+                        <p>Under construction...</p>
+                    </header>
+                </div>
+            </section>
         </main>
 
-        <div class="svg-bottom">
-            <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
-                <path d="M0,100 C300,200 1100,0 1440,100 L1440,200 L0,200 Z", fill="#4c8054"></path>
-            </svg>
-        </div>
-        <div class="svg-bottom">
-            <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
-                <path
-                d="M0,75 C300,175 1100,-25 1440,75",
-                stroke="#73ab79",
-                stroke-width="3",
-                fill="none">
-                </path>
-            </svg>
-        </div>
+        <div class="bottom-space"></div>
 
-        <dialog id="modal">
-            <form method="dialog">
-                <button id="close-btn">ｘ</button>
-            </form>
+        <footer>
+            <a class="hv-ul" id="toggle-light-dark">toggle dark/light</a> |
+            <a class="hv-ul" href="https://github.com/T-b-t-nchos/T-b-t-nchos.github.io">Source of this page</a>
+            <p class="copyright">© 2026 T-b-t-nchos. All rights reserved.</p>
+        </footer>
 
-            <h3 id="modal-title"></h3>
-            <p id="modal-content"></p>
-        </dialog>
-
-        <script src="./js/pages/index.js"></script>
-        <script src="./js/common/dialog.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
