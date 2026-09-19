@@ -1,34 +1,48 @@
-<!-- Unused -->
-<!DOCTYPE HTML>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ja">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/common/COMMON.css">
-        <link rel="stylesheet" href="/css/pages/errors.css">
-        <link rel="icon" href="/assets/cycle-logo.ico">
-        <meta name="robots" content="unindex">
+
+        <title>T-b-t-nchos</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Noto+Emoji:wght@300..700&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="icon" href="./assets/cycle-logo.ico">
+        <link rel="canonical" href="https://t-b-t.nchos.net/index.html">
+
+        <meta name="description" content="T-b-t-nchos/Nchos Website.">
+        <meta name="robots" content="noindex">
+        <meta name="keywords" content="T-b-t-nchos, Nchos, portfolio, personal, website">
+        <meta name="author" content="T-b-t-nchos">
+        <meta name="theme-color" content="#111211">
+        <meta name="color-scheme" content="light dark">
     </head>
-    <body data-error="500">
-        <main class="fade-in">
-            <div class="error-page">
-                <h1>
-                    <span class="noto-emoji">⚠</span>
-                    <span class="error-code"></span>
-                    /
-                    <span class="error-title"></span>
-                    <span class="noto-emoji">⚠</span>
-                </h1>
 
-                <p class="error-description"></p>
+    <body>
+        <main>
+            <section class="hero">
+                <div class="shape shape-n" aria-hidden="true">5</div>
+                <canvas id="particles" aria-hidden="true"></canvas>
 
-                <a href="/" class="hl hv-ul" target="_top">
-                    &gt;&gt; Click to go to main page
-                </a>
-            </div>
+                <div class="hero-content">
+                    <h1 class="title fit-text">Error - 500</h1>
+                    <p class="subtitle fit-text"><a href="/" class="hv-ul"">→back to top page</a></p>
+                </div>
+
+                <div class="shape shape-t" aria-hidden="true">00</div>
+            </section>
         </main>
 
-        <script src="/js/pages/errors.js"></script>
+        <footer>
+            <a class="hv-ul" id="toggle-light-dark" href="#toggle-light-dark">toggle dark/light</a> |
+            <a class="hv-ul" href="https://github.com/T-b-t-nchos/T-b-t-nchos.github.io">Source of this page</a>
+            <p class="copyright">© 2026 T-b-t-nchos. All rights reserved.</p>
+        </footer>
+
+        <script src="/script.js"></script>
     </body>
 </html>
 
