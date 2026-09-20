@@ -18,7 +18,7 @@ export async function onRequest(context) {
     const status = Number(errorNo);
 
     /*
-     * Only allow valid HTTP status codes.
+     * Only allow HTTP error status codes.
      */
     if (status < 400 || status > 599) {
         return new Response("Bad Request", {
@@ -34,17 +34,38 @@ export async function onRequest(context) {
      */
     if (status === 418) {
         const specialUrl = new URL("/errors/418.html", request.url);
+        const specialResponse = await env.ASSETS.fetch(
+            new Request(specialUrl)
+        );
 
-        return env.ASSETS.fetch(new Request(specialUrl, request));
+        if (!specialResponse.ok) {
+            return new Response("Internal Server Error", {
+                status: 500,
+                headers: {
+                    "Content-Type": "text/plain; charset=UTF-8"
+                }
+            });
+        }
+
+        return new Response(specialResponse.body, {
+            status: 418,
+            headers: {
+                "Content-Type": "text/html; charset=UTF-8",
+                "Cache-Control": "public, max-age=300"
+            }
+        });
     }
 
     /*
      * Load the generic error page template.
      */
-    const templateUrl = new URL("/errors/template.html", request.url);
+    const templateUrl = new URL(
+        "/errors/template.html",
+        request.url
+    );
 
     const templateResponse = await env.ASSETS.fetch(
-        new Request(templateUrl, request)
+        new Request(templateUrl)
     );
 
     if (!templateResponse.ok) {
@@ -81,4 +102,3 @@ export async function onRequest(context) {
         }
     });
 }
-
