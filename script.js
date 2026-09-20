@@ -312,8 +312,35 @@ function createWorks() {
     });
 }
 
+function createHistory() {
+    const container = document.getElementById("history-list");
+
+    if (!container || !window.historyData) {
+        return;
+    }
+
+    window.historyData.forEach((event) => {
+        const article = document.createElement("article");
+        article.className = "history-event";
+
+        article.innerHTML = `
+            <div class="history-content">
+                <span class="history-date">
+                    <span>${event.date}</span>
+                    <span class="history-category">[${event.category}]</span>
+                </span>
+                <h2>${event.title}</h2>
+                <p>${event.description}</p>
+            </div>
+        `;
+
+        container.appendChild(article);
+    });
+}
+
 createLinks();
 createWorks();
+createHistory();
 
 
 //light-dark

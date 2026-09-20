@@ -349,6 +349,113 @@ a {
 }
 
 
+/*history*/
+/*-----------------------------------------------------------------------------------------*/
+.history-timeline {
+    position: relative;
+}
+
+.history-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(50% - 1px);
+    width: 2px;
+    background: var(--line);
+}
+
+.history-timeline::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: calc(50% - 4px);
+    width: 8px;
+    height: 8px;
+    background: var(--sub-ink);
+    opacity: 0.62;
+    transform: rotate(45deg);
+}
+
+.history-event:last-child::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: calc(50% - 4px);
+    width: 8px;
+    height: 8px;
+    background: var(--sub-ink);
+    opacity: 0.62;
+    transform: rotate(45deg);
+}
+
+.history-event {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 8rem;
+}
+
+.history-event::before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    left: calc(50% - 5.5px);
+    width: 7px;
+    height: 7px;
+    border: 2px solid var(--line);
+    background: var(--page-bg);
+    transform: rotate(45deg);
+}
+
+.history-event:nth-child(odd) .history-content {
+    grid-column: 1;
+    padding-right: 4rem;
+    text-align: right;
+}
+
+.history-event:nth-child(even) .history-content {
+    grid-column: 2;
+    padding-left: 4rem;
+}
+
+.history-date {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+}
+
+.history-event:nth-child(odd) .history-date {
+    justify-content: flex-end;
+}
+
+.history-category {
+    font-family: inherit;
+    color: inherit;
+}
+
+.history-content h2 {
+    margin: 0;
+    font-size: clamp(1rem, 1.4vw, 1.4rem);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+}
+
+.history-content p {
+    margin: 0.3rem 0 0;
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    opacity: 0.62;
+    color: var(--sub-ink);
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+}
+
+
 /*fotter*/
 /*-----------------------------------------------------------------------------------------*/
 
@@ -463,6 +570,38 @@ fotter button {
 
     .list-content h2 {
         line-height: 1.12;
+    }
+
+    .history-timeline::before {
+        left: 1rem;
+    }
+
+    .history-timeline::after {
+        left: calc(1rem - 3px);
+    }
+
+    .history-event:last-child::after {
+        left: calc(1rem - 3px);
+    }
+
+    .history-event {
+        display: block;
+        min-height: 0;
+        padding: 0 0 3rem 3rem;
+    }
+
+    .history-event::before {
+        left: calc(1rem - 3.75px);
+    }
+
+    .history-event:nth-child(odd) .history-content,
+    .history-event:nth-child(even) .history-content {
+        padding: 0;
+        text-align: left;
+    }
+
+    .history-event:nth-child(odd) .history-date {
+        justify-content: flex-start;
     }
 }
 
