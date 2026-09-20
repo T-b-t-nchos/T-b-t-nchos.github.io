@@ -46,6 +46,10 @@ body {
     font-family: "Zilla Slab", "Kiwi Maru", "Noto Emoji", serif;
 }
 
+body, section, header, footer, main, div {
+    transition: color 0.4s ease, background-color 0.4s ease;
+}
+
 a {
     text-decoration: none;
     color: var(--sub-ink);
