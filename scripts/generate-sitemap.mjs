@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const root = path.resolve(__dirname, "..");
 
-const SITE_URL = "https://nchos.net";
+const SITE_URL = "https://t-b-t.nchos.net/";
 
 const OUTPUT_FILE = path.join(root, "sitemap.xml");
 
