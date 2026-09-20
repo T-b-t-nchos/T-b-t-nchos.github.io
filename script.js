@@ -229,6 +229,92 @@ window.addEventListener("resize", init);
 
 init();
 
+//lists
+//-------------------------------------------------------------------
+function createLinks() {
+    const container = document.getElementById("links-list");
+
+    if (!container || !window.linksData) {
+        return;
+    }
+
+    window.linksData.forEach((link, index) => {
+        const element = document.createElement("a");
+        element.className = "list-item";
+        element.href = link.url;
+        element.setAttribute("aria-label", link.ariaLabel);
+
+        element.innerHTML = `
+            <div class="list-index">${String(index + 1).padStart(2, "0")}</div>
+
+            <div class="list-content">
+                <h2>${link.title}</h2>
+                <p>${link.description}</p>
+            </div>
+
+            <span class="list-view">VIEW →</span>
+        `;
+
+        container.appendChild(element);
+    });
+}
+
+function createWorks() {
+    const container = document.getElementById("works-list");
+
+    if (!container || !window.worksData) {
+        return;
+    }
+
+    window.worksData.forEach((category) => {
+        const heading = document.createElement("h3");
+        heading.textContent = `◇ ${category.category}`;
+
+        const list = document.createElement("div");
+        list.className = "list";
+
+        category.items.forEach((work) => {
+            const element = document.createElement("a");
+            element.className = "list-item";
+
+            if (work.image) {
+                element.classList.add("has-preview");
+            }
+
+            element.href = work.url;
+            element.setAttribute("aria-label", work.ariaLabel);
+
+            element.innerHTML = `
+                <div class="list-index">${work.index}</div>
+
+                <div class="list-content">
+                    <h2>${work.title}</h2>
+                    <p>${work.description}</p>
+                    ${
+                        work.image
+                            ? `<img class="list-item-preview" src="${work.image}" alt="" aria-hidden="true" />`
+                            : ""
+                    }
+                </div>
+
+                <span class="list-view">${work.viewText || "VIEW →"}</span>
+            `;
+
+            list.appendChild(element);
+        });
+
+        container.appendChild(heading);
+        container.appendChild(list);
+
+        if (category !== window.worksData[window.worksData.length - 1]) {
+            container.insertAdjacentHTML("beforeend", "<br><br>");
+        }
+    });
+}
+
+createLinks();
+createWorks();
+
 
 //light-dark
 //-------------------------------------------------------------------
