@@ -3,7 +3,10 @@
     "include": [
         "/teapot",
         "/teapot/",
-        "/errors/*"
+        "/errors/403",
+        "/erorrs/404",
+        "/errors/500",
+        "/errors/503"
     ],
     "exclude": [
         "/errors/template.html",
