@@ -2,7 +2,11 @@
     "version": 1,
     "include": [
         "/teapot",
-        "/teapot/"
+        "/teapot/",
+        "/errors/*"
     ],
-    "exclude": []
+    "exclude": [
+        "/errors/template.html",
+        "/errors/418.html"
+    ]
 }
