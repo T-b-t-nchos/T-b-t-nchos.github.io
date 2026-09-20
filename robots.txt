@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /errors/
+Sitemap: https://t-b-t.nchos.net/sitemap.xml
