@@ -24,6 +24,12 @@ window.historyData = [
         description: "Created <a href=\"old/before20260926/index.html\">first version of my personal website</a>."
     },
     {
+        date: "2026.02",
+        category: "OTHER",
+        title: "1st place at the LT event",
+        description: "Won the Best Presentation Award at the LT-event at<br>the sf-kosen discord campus, a fictional college"
+    },
+    {
         date: "2025.12",
         category: "SCHOOL",
         title: "Student Council President",
