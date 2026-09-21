@@ -4,9 +4,9 @@ const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 
 const settings = {
-    minParticles: 36,
-    maxParticles: 180,
-    particleArea: 7000,
+    minParticles: 64,
+    maxParticles: 256,
+    particleArea: 4096,
     minRadius: 1.1,
     maxRadius: 2.1,
     minSpeed: 0.08,
