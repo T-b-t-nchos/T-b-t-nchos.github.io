@@ -28,5 +28,11 @@ window.linksData = [
         description: "@nchos",
         url: "https://zenn.dev/nchos",
         ariaLabel: "View Zenn page"
-    }
+    },
+    {
+        title: "PGP public keys",
+        description: "pgp.nchos.net",
+        url: "https://pgp.nchos.net/",
+        ariaLabel: "View PGP public keys page"
+    },
 ];
