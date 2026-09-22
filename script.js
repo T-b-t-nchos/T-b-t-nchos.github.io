@@ -303,7 +303,7 @@ function createWorks() {
                     }
                     ${
                         work.image
-                            ? `<img class="list-item-preview" src="${work.image}" alt="" aria-hidden="true" />`
+                            ? `<img class="list-item-preview" src="${work.image}" alt="Preview image of ${work.title}" aria-hidden="true" />`
                             : ""
                     }
                     </picture>
