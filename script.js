@@ -290,11 +290,23 @@ function createWorks() {
                 <div class="list-content">
                     <h2>${work.title}</h2>
                     <p>${work.description}</p>
+                    <picture>
+                    ${
+                        work.image_avif
+                            ? `<source srcset="${work.image_avif}" type="image/avif" />`
+                            : ""
+                    }
+                    ${
+                        work.image_webp
+                            ? `<source srcset="${work.image_webp}" type="image/webp" />`
+                            : ""
+                    }
                     ${
                         work.image
                             ? `<img class="list-item-preview" src="${work.image}" alt="" aria-hidden="true" />`
                             : ""
                     }
+                    </picture>
                 </div>
 
                 <span class="list-view">${work.viewText || "VIEW →"}</span>
