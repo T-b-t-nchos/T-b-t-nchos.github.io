@@ -54,7 +54,7 @@ Get-ChildItem -Path $RootDirectory -File -Recurse |
         Write-Host "Processing: $InputFile"
 
         if (-not (Test-Path $WebP)) {
-            Write-Host "  -> WebP"
+            Write-Host "  -> WebP ($WebP)"
             magick $InputFile -quality 85 $WebP
         }
         else {
@@ -62,7 +62,7 @@ Get-ChildItem -Path $RootDirectory -File -Recurse |
         }
 
         if (-not (Test-Path $AVIF)) {
-            Write-Host "  -> AVIF"
+            Write-Host "  -> AVIF ($AVIF)"
             magick $InputFile -quality 80 $AVIF
         }
         else {
