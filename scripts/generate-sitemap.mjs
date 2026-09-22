@@ -70,7 +70,7 @@ function htmlPathToUrl(filePath) {
     let relativePath = path.relative(root, filePath).replaceAll(path.sep, "/");
 
     if (relativePath === "index.html") {
-        return `${SITE_URL}/`;
+        return `${SITE_URL}`;
     }
 
     if (relativePath.endsWith("/index.html")) {
