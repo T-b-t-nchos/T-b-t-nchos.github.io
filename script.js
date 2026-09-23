@@ -238,6 +238,8 @@ function createLinks() {
         return;
     }
 
+    container.innerHTML = "";
+
     window.linksData.forEach((link, index) => {
         const element = document.createElement("a");
         element.className = "list-item";
@@ -265,6 +267,8 @@ function createWorks() {
     if (!container || !window.worksData) {
         return;
     }
+
+    container.innerHTML = "";
 
     window.worksData.forEach((category) => {
         const heading = document.createElement("h3");
@@ -330,6 +334,8 @@ function createHistory() {
     if (!container || !window.historyData) {
         return;
     }
+
+    container.innerHTML = "";
 
     window.historyData.forEach((event) => {
         const article = document.createElement("article");
